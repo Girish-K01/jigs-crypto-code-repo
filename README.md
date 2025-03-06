@@ -1,7 +1,7 @@
 # **JIGS: A Modular Parallel Encryption and Authentication Pipeline for Secure Messaging**  
 
 ## **Overview**  
-JIGS (Jointly Integrated Guard System) is a **hybrid secure messaging architecture** designed to balance security and efficiency. It leverages:  
+JIGS (jigsaw) is a **hybrid secure messaging architecture** designed to balance security and efficiency. It leverages:  
 - **ECDH key exchanges** for forward secrecy  
 - **Nonce-based AES-128 encryption** for data confidentiality  
 - **Parallel processing** to improve performance  
