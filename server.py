@@ -113,7 +113,7 @@ start = time.time()
 combined_blocks = receive_combined_message(client_socket)
 finalmessage = preprocess_and_decrypt(combined_blocks)
 end = time.time()
-print(end - start)
+print(end - start) #prints the server processing time
 byte_data = b''.join(finalmessage)
 complete_message = byte_data.decode("utf-8")
 #print(complete_message)

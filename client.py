@@ -89,7 +89,7 @@ IV = secrets.randbits(128)
 start = time.time()
 finalmessage = preprocess_and_encrypt(message)
 end = time.time()
-print(end - start)
+print(end - start) #prints the client processing time
 client_socket.send(IV.to_bytes(16, byteorder="big"))    
 send_combined_message(finalmessage, client_socket)
 client_socket.close()
