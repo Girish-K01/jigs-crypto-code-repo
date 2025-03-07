@@ -29,10 +29,13 @@ Through experimental results, we observed a **96.67% performance improvement**, 
    ```  
    This script will first launch the **server**, introduce a delay, and then start the **client**, eliminating the need for manual execution.  
 
+### **Recommended Execution Environment**  
+For optimal performance, run the program in a **Linux distribution** such as **Ubuntu**. Windows users can utilize **WSL (Windows Subsystem for Linux)**, while others can run it in a **virtualized Linux environment** using software like **VMware** or **VirtualBox**.
+
 ### **Operating System Compatibility**  
 - **Linux:** Fully supported. The program uses multiprocessing, which works as expected.  
-- **Windows:** May encounter errors or lack support for multiprocessing.  
-- **macOS:** Multiprocessing is generally supported, but behavior may vary based on Python implementation.  
+- **Windows:** May encounter errors or lack full support for multiprocessing.  
+- **macOS:** Multiprocessing is generally supported, but behavior may vary depending on the Python implementation.  
 
 ### **Experimenting with Different File Sizes**  
 - The `data_files` folder contains pre-generated files of various sizes, created using `generatexkb.py`.  
