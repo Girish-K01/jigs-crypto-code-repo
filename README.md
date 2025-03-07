@@ -56,7 +56,7 @@ Replace `onekb.txt` with the desired filename.
 - **Execution Timing:** The file `newcryptotimes.txt` contains execution times (5 runs) for sender and receiver across different file sizes, measured on **WSL Ubuntu 20.02 with an Intel i7 10th generation CPU**.  
 
 ## **License**  
-This project is licensed under **[CC BY-NC 4.0](LICENSE)** (Attribution-NonCommercial 4.0 International).  
+This project is licensed under **[CC BY-NC 4.0](LICENSE.md)** (Attribution-NonCommercial 4.0 International).  
 
 ## **Contributing**  
 Contributions are welcome! Please follow the [contributing guidelines](CONTRIBUTING.md).
