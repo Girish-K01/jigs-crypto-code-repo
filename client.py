@@ -5,7 +5,20 @@ from cryptography.hazmat.primitives.kdf.hkdf import HKDF
 from cryptography.hazmat.primitives.asymmetric import ec
 from ecdsa import SigningKey
 from hashlib import sha256
-import secrets,pyaes,pickle,os,time, socket,pyaes, binascii
+import sys,secrets,pyaes,pickle,os,time,socket,pickle
+
+# Ensure the user provided a file argument
+if len(sys.argv) < 2:
+    print("Usage: python client.py <input_file>")
+    sys.exit(1)
+
+# Get file path from command-line argument
+input_file = sys.argv[1]
+
+# Ensure the file exists
+if not os.path.exists(input_file):
+    print(f"Error: The file '{input_file}' does not exist.")
+    sys.exit(1)
 
 def generate_random_seed():
     return os.urandom(32)  
@@ -76,9 +89,16 @@ client_socket.connect((host, port)) # Connecting to the server
 ECC_KEY = key_generation()
 PRIVATE_KEY, PUBLIC_KEY= generate_ECC_pair(ECC_KEY)
 SHARED_KEY = key_exchange(PRIVATE_KEY, PUBLIC_KEY, client_socket)
-with open("./data_files/onemb.txt") as file: #change the file name here according to necessary file size
+
+# with open("./data_files/onekb.txt") as file: #change the file name here according to necessary file size
+#     message = file.read().encode("utf-8")
+
+# Read message from the specified file
+with open(input_file, "r") as file:
     message = file.read().encode("utf-8")
+
 #print("\nMessage Chosen: ", message)
+
 private_key_bytes = PRIVATE_KEY.private_bytes(
         encoding=serialization.Encoding.PEM,
         format=serialization.PrivateFormat.PKCS8,
@@ -89,7 +109,7 @@ IV = secrets.randbits(128)
 start = time.time()
 finalmessage = preprocess_and_encrypt(message)
 end = time.time()
-print(end - start) #prints the client processing time
+print("client: ",end - start) #prints the client processing time
 client_socket.send(IV.to_bytes(16, byteorder="big"))    
 send_combined_message(finalmessage, client_socket)
 client_socket.close()
