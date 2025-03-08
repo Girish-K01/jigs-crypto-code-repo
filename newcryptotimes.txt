@@ -1,6 +1,8 @@
 Contains execution times (5 runs) for sender and receiver across different file sizes as stated, 
 measured on -> WSL Ubuntu 20.02 with an Intel i7 10th generation CPU.
 
+These times may vary according to device specifications and available ram/ram used when running the program
+
 1kb sender
 
 0.038327932357788086 

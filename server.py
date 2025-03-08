@@ -1,13 +1,12 @@
-from multiprocessing import Pool, Value, Array
+from multiprocessing import Pool
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import hashes, serialization
 from cryptography.hazmat.primitives.kdf.hkdf import HKDF
 from cryptography.hazmat.primitives.asymmetric import ec
 from ecdsa import VerifyingKey, BadSignatureError
 from hashlib import sha256
-import pyaes,pickle,os,time,binascii, socket,pyaes
-from ecdsa import SigningKey
-from hashlib import sha256
+import pyaes,pickle,os,time,socket
+
 
 def generate_random_seed():
     return os.urandom(32) 

@@ -10,13 +10,13 @@ client_script = 'client.py'  # Client (sender) script
 input_file = os.getenv("INPUT_FILE", "./data_files/onekb.txt")
 
 # Run the server script (receiver) in a new process
-server_process = subprocess.Popen(['python', server_script])
+server_process = subprocess.Popen(['python3', server_script])
 
 # Wait for the server to start up before running the client
 time.sleep(2)  # Adjust the sleep time if needed
 
 # Run the client script (sender) with the input file
-client_process = subprocess.Popen(['python', client_script, input_file])
+client_process = subprocess.Popen(['python3', client_script, input_file])
 
 # Wait for both processes to complete
 server_process.wait()
