@@ -2,7 +2,7 @@
 
 ## **Overview**  
 JIGS (jigsaw) is a **hybrid secure messaging architecture** designed to balance security and efficiency. It leverages:  
-- **ECDH key exchanges** for forward secrecy  https://github.com/Girish-K01/jigs-crypto-code-repo/blob/main/README.md
+- **ECDH key exchanges** for forward secrecy
 - **Nonce-based AES-128 encryption** for data confidentiality  
 - **Parallel processing** to improve performance  
 
