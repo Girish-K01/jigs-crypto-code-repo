@@ -1,5 +1,8 @@
 # **JIGS: A Modular Parallel Encryption and Authentication Pipeline for Secure Messaging**
 
+This algorithm has been formally peer-reviewed and published in IOP Engineering Research Express Journal, Volume 7.
+You can find the paper here [Link](https://iopscience.iop.org/article/10.1088/2631-8695/addd67/meta) or visit [my profile](https://scholar.google.com/citations?user=hOmai0UAAAAJ&hl=en)
+
 <div align="center">
   <table>
     <tr>
